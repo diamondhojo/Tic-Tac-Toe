@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>My Tic Tac Toe Game</h1>
+
+        <div id="app">
+            <label for="bsize">Board Size:</label>
+                <input type="number" v-model.number="bsize" id="bsize" name="bsize" value=""><br><br>
+            <label for="wsize">Win Size:</label>
+                <input type="number" v-model.number="wsize" id="wsize" name="wsize" value=""><br><br>
+            <input type="submit" id="submit" value="Submit" v-on:click="generate(bsize.value, wsize.value)">
+            <input type="submit" id="reset" value="Reset" disabled=True v-on:click="reset">
+        </div>
+
+        <script src="vue.js"></script>
+        <script src="backend.js"></script>
+    </body>
+</html>
